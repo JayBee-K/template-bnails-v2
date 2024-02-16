@@ -1,13 +1,15 @@
 :root {
 	--transition-default: 0.3s all ease-in-out;
-	--font-theme: 'Inter', Arial, Helvetica, sans-serif;
+	--font-heading: 'Abhaya Libre', Arial, Helvetica, sans-serif;
+	--font-theme: 'Helvetica', sans-serif;
 	--size-theme: 14px;
+	--text-main: #111215;
 }
 
 body {
 	position: relative;
 	width: 100%;
-	color: var(--bs-gray-800);
+	color: var(--text-main);
 	font-family: var(--font-theme);
 	font-size: var(--size-theme);
 	font-weight: 400;
@@ -221,68 +223,12 @@ input[type='number'] {
 	flex: 1 1 0 !important;
 }
 
-.fz-10 {
-	font-size: .7em;
-}
-
-.fz-11 {
-	font-size: .775em;
-}
-
-.fz-12 {
-	font-size: .85em;
-}
-
-.fz-13 {
-	font-size: .925em;
-}
-
-.fz-14 {
-	font-size: 1em;
-}
-
-.fz-15 {
-	font-size: 1.075em;
-}
-
-.fz-16 {
-	font-size: 1.15em;
-}
-
-.fz-17 {
-	font-size: 1.225em;
-}
-
-.fz-18 {
-	font-size: 1.3em;
-}
-
-.fz-19 {
-	font-size: 1.375em;
-}
-
-.fz-20 {
-	font-size: 1.45em;
-}
-
-.fz-21 {
-	font-size: 1.525em;
-}
-
-.fz-22 {
-	font-size: 1.6em;
-}
-
-.fz-23 {
-	font-size: 1.675em;
-}
-
-.fz-24 {
-	font-size: 1.75em;
-}
-
 .fw-medium {
 	font-weight: 500;
+}
+
+.fs-inherit {
+	font-size: inherit !important;
 }
 
 @media screen and (min-width: 1400px) {
@@ -336,4 +282,17 @@ input[type='number'] {
 
 .modal-dialog-scrollable .modal-body::-webkit-scrollbar-thumb:hover {
 	background: #949494;
+}
+
+.section-heading .heading-title {
+	font-family: var(--font-heading);
+	font-weight: 800;
+	font-size: calc(3em - 2px);
+	color: var(--text-main);
+}
+
+.section-heading .heading-sub {
+	font-size: 1.3em;
+	font-weight: 500;
+	color: var(--text-main);
 }
