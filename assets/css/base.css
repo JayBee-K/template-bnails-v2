@@ -66,18 +66,18 @@
 	--font-heading: 'Abhaya Libre', Arial, Helvetica, sans-serif;
 	--font-theme: 'HelveticaNeue', sans-serif;
 	--size-theme: 14px;
-	--text-main: #111215;
 }
 
 body {
 	position: relative;
 	width: 100%;
-	color: var(--text-main);
+	color: var(--bs-black);
 	font-family: var(--font-theme);
 	font-size: var(--size-theme);
 	font-weight: 300;
 	font-style: normal;
 	background-color: #fff;
+	letter-spacing: .75px;
 }
 
 a,

@@ -1,0 +1,16 @@
+.section-heading .heading-title {
+	font-family: var(--font-heading);
+	font-size: calc(3em - 2px); /* 40px */
+	font-weight: 800;
+	margin-bottom: 15px;
+}
+
+.section-heading .heading-sub {
+	font-size: 1.3em; /* 18px */
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+
+.section-heading .heading-text {
+	font-size: 1.15em; /* 16px */
+}
