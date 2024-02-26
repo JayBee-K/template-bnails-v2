@@ -66,6 +66,13 @@
 	--font-heading: 'Abhaya Libre', Arial, Helvetica, sans-serif;
 	--font-theme: 'HelveticaNeue', sans-serif;
 	--size-theme: 14px;
+
+	--primary-color: #E1099E;
+	--primary-hover: #F960C9;
+	--primary-rgb: 225, 9, 158;
+	--secondary-color: #e85000;
+	--secondary-hover: #ee6b20;
+	--secondary-rgb: 232, 80, 0;
 }
 
 body {
@@ -347,15 +354,66 @@ input[type='number'] {
 	background: #949494;
 }
 
-.section-heading .heading-title {
-	font-family: var(--font-heading);
-	font-weight: 800;
-	font-size: calc(3em - 2px);
-	color: var(--text-main);
+.button-theme {
+	font-size: 1em;
+	font-weight: 700;
+	font-family: var(--font-theme);
+	line-height: 24px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: var(--transition-default);
+	padding: 8px 16px;
+	border-radius: 56px;
 }
 
-.section-heading .heading-sub {
-	font-size: 1.3em;
-	font-weight: 500;
-	color: var(--text-main);
+.button-theme.button-lg {
+	padding: 12px 24px;
+}
+
+.button-theme.button-xl {
+	padding: 16px 32px;
+}
+
+.button-theme.button-theme_dark {
+	color: #111215;
+	background-color: transparent;
+	border: 1px solid #111215;
+}
+
+.button-theme.button-theme_dark:hover {
+	color: var(--bs-white);
+	background-color: var(--primary-color);
+	border: 1px solid var(--primary-color);
+}
+
+.button-theme.button-theme_primary {
+	color: var(--bs-white);
+	background-color: var(--primary-color);
+	border: 1px solid var(--primary-color);
+}
+
+.button-theme.button-theme_primary:hover {
+	color: var(--bs-white);
+	background-color: var(--primary-hover);
+	border: 1px solid var(--primary-hover);
+}
+
+.button-theme.button-theme_secondary {
+	color: #111215;
+	background-color: #FEE4F6;
+	border: 1px solid #FEE4F6;
+}
+
+.button-theme.button-theme_secondary:hover {
+	color: var(--bs-white);
+	background-color: var(--primary-color);
+	border: 1px solid var(--primary-color);
+}
+
+.button-theme:disabled,
+.button-theme.disabled {
+	color: var(--bs-white) !important;
+	border: 1px solid #C8CBD3 !important;
+	background-color: #C8CBD3 !important;
 }
