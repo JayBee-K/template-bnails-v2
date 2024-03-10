@@ -70,15 +70,19 @@
 	--primary-color: #E1099E;
 	--primary-hover: #F960C9;
 	--primary-rgb: 225, 9, 158;
+
+	--primary-200:#FB95DB;
+	--primary-50:#FEE4F6;
 	--secondary-color: #e85000;
 	--secondary-hover: #ee6b20;
 	--secondary-rgb: 232, 80, 0;
+	--text-color:#111215;
 }
 
 body {
 	position: relative;
 	width: 100%;
-	color: var(--bs-black);
+	color: #111215;
 	font-family: var(--font-theme);
 	font-size: var(--size-theme);
 	font-weight: 300;
@@ -200,6 +204,10 @@ input::-webkit-inner-spin-button {
 
 input[type='number'] {
 	-moz-appearance: textfield;
+}
+ul{
+	list-style-type: none;
+	padding-left: 0;
 }
 
 .zi--1 {
