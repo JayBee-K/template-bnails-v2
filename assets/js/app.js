@@ -107,6 +107,21 @@ let handleCallMenu = function () {
 		handleBody();
 	}
 }
+Fancybox.bind("[data-fancybox]", {
+});
+
+const handleInitFancybox = function () {
+	if ($('.initFancybox').length) {
+		$('.initFancybox').each(function () {
+			let elm = $(this);
+			Fancybox.bind(`[data-fancybox=${elm.attr('data-fancybox')}]`, {
+				thumbs: {
+					autoStart: true,
+				},
+			});
+		});
+	}
+}
 
 $(function () {
 	handleApplyCollapse($('#header-navigation > ul'), true, true);
@@ -115,4 +130,5 @@ $(function () {
 		handleApplyCollapse($('#header-navigation > ul'));
 		handleCallMenu();
 	});
+	handleInitFancybox();
 });

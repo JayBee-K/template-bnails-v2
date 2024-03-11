@@ -623,3 +623,131 @@ transform: rotate(45deg);
     background-color: var(--primary-color);
     color:var(--bs-white);
 }
+
+/*==========================================
+            section-service
+/*===========================================*/
+.section-service{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+}
+.card-service{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:32px;
+    transition: var(--transition-default);
+    padding: 24px;
+    border-radius: 32px;
+}
+.card-service__image{
+    width: 72px;
+    height: 72px;
+}
+.card-service__image > img{
+  width: 100%;
+    height: 100%;
+}
+.card-service__content{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+}
+.card-service__title{
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 1.45em;
+    line-height: 32px;
+}
+.card-service__text{
+    color: var(--text-color);
+    font-weight: 300;
+    line-height: 24px;
+}
+.card-service__link{
+    display: inline-flex;
+    padding: 12px 0;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: var(--primary-color);
+    font-weight: 700;
+    transition: var(--transition-default);
+}
+.card-service:hover{
+    background: var(--bs-white);
+    box-shadow: 8px 16px 40px 0px rgba(147, 1, 101, 0.10);
+}
+
+/*==========================================
+           section-experience
+/*===========================================*/
+.section-experience__wrap{
+    border-radius: 40px;
+    background: var(--primary-color);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:30px;
+
+}
+.section-experience__left{
+    display: flex;
+    flex-direction: column;
+    gap:32px;
+    padding-left: 135px;
+    flex-shrink: 0;
+    width: 50%;
+}
+.section-experience__right{
+width: 100%;
+}
+.section-experience__title{
+    color: var(--bs-white);
+    font-family: "Abhaya Libre ExtraBold";
+    font-size:2em;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+}
+.section-experience__text{
+    color: var(--bs-white);
+    font-weight: 300;
+    white-space: nowrap;
+}
+.section-experience__right > img{
+position: absolute;
+    left: 0;
+    top:30px;
+    width: 60%;
+    height: auto;
+    z-index: 1;
+}
+.section-experience__image > img{
+    width: 100%;
+    height: auto;
+}
+@media(max-width: 1024px) {
+    .section-experience__left{
+        padding-left:50px;
+    }
+    .section-experience__button > a > img{
+        width: 100px;
+        height: auto;
+    }
+}
+
+@media(max-width: 576px) {
+    .section-experience__title {
+        font-size: 1.05em;
+    }
+    .section-experience__text {
+        font-size: 0.7em;
+    }
+    .section-experience__left {
+        padding-left: 30px;
+        gap: 10px;
+    }
+    .section-experience__button > a > img{
+        width: 70px;
+    }
+}

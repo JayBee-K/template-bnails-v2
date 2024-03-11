@@ -195,7 +195,16 @@ textarea:focus {
 	line-clamp: var(--line);
 	-webkit-box-orient: vertical;
 }
-
+.limit-3 {
+	--line: 3;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: var(--line);
+	line-clamp: var(--line);
+	-webkit-box-orient: vertical;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
