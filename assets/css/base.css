@@ -71,12 +71,14 @@
 	--primary-hover: #F960C9;
 	--primary-rgb: 225, 9, 158;
 
+	--primary-400:#F72BB7;
 	--primary-200:#FB95DB;
 	--primary-50:#FEE4F6;
 	--secondary-color: #e85000;
 	--secondary-hover: #ee6b20;
 	--secondary-rgb: 232, 80, 0;
 	--text-color:#111215;
+	--gray-400:#9196A6;
 }
 
 body {
@@ -184,7 +186,16 @@ textarea:focus {
 	content: '';
 	display: block;
 }
-
+.limit-1 {
+	--line: 1;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: var(--line);
+	line-clamp: var(--line);
+	-webkit-box-orient: vertical;
+}
 .limit {
 	--line: 2;
 	overflow: hidden;
