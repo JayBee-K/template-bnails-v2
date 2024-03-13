@@ -15,7 +15,7 @@ let handleApplyCollapse = function ($parent, $firstItem = false, $callFunction =
 		});
 	}
 
-	if (windowWidth <= 991) {
+	if (windowWidth <= 1024) {
 
 		let $objParentAttr = {};
 		let $objChildrenAttr = {
@@ -89,20 +89,28 @@ let handleCallMenu = function () {
 		}
 	}
 
-	if (windowWidth <= 991) {
+	if (windowWidth <= 1024) {
 		const $hamburger = $('#hamburger-button');
 		if ($hamburger.length) {
 			$hamburger.click(function () {
 				handleBody(true)
 			});
 		}
-
 		const $overlay = $('#header-overlay');
 		if ($overlay.length) {
 			$overlay.click(function () {
 				handleBody();
 			});
 		}
+
+		const $closeHamburger = $('#close-navigation');
+		if ($closeHamburger.length) {
+			$closeHamburger.click(function () {
+				handleBody(true)
+			});
+		}
+
+
 	} else {
 		handleBody();
 	}
@@ -122,6 +130,23 @@ const handleInitFancybox = function () {
 		});
 	}
 }
+const handleScrollTop = function () {
+	$(window).scroll(function () {
+		if ($(document).scrollTop() > 300) {
+			$('.scroll-top').addClass('is-show');
+		} else {
+			$('.scroll-top').removeClass('is-show');
+
+		}
+	})
+	$('#scroll-top').click(function (e) {
+		e.stopPropagation();
+		$("html, body").animate({
+			scrollTop: 0
+		}, 800);
+		return false;
+	});
+}
 
 $(function () {
 	handleApplyCollapse($('#header-navigation > ul'), true, true);
@@ -131,4 +156,5 @@ $(function () {
 		handleCallMenu();
 	});
 	handleInitFancybox();
+	handleScrollTop();
 });

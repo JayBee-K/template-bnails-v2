@@ -65,6 +65,10 @@
                 centeredSlides: true,
                 loop: true,
                 speed: 1000,
+                autoplay: {
+                    delay: 6000,
+                    disableOnInteraction: true,
+                },
                 breakpoints: {
                     425: {
                         slidesPerView: 2.3

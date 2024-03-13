@@ -71,6 +71,7 @@
 	--primary-hover: #F960C9;
 	--primary-rgb: 225, 9, 158;
 
+	--text-gradient:linear-gradient(180deg, #F960C9 12.5%, #F72BB7 64.5%, #CA008C 100%);
 	--primary-400:#F72BB7;
 	--primary-200:#FB95DB;
 	--primary-50:#FEE4F6;
@@ -444,4 +445,12 @@ ul{
 	color: var(--bs-white) !important;
 	border: 1px solid #C8CBD3 !important;
 	background-color: #C8CBD3 !important;
+}
+.bg-main{
+	background-repeat: no-repeat;
+	background-size: contain;
+	overflow: hidden;
+}
+.section-gap-small{
+	padding: 64px 0;
 }
