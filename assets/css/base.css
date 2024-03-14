@@ -74,12 +74,14 @@
 	--text-gradient:linear-gradient(180deg, #F960C9 12.5%, #F72BB7 64.5%, #CA008C 100%);
 	--primary-400:#F72BB7;
 	--primary-200:#FB95DB;
+	--primary-100:#FDCAED;
 	--primary-50:#FEE4F6;
 	--secondary-color: #e85000;
 	--secondary-hover: #ee6b20;
 	--secondary-rgb: 232, 80, 0;
 	--text-color:#111215;
 	--gray-400:#9196A6;
+	--gray-600:#5F6475;
 }
 
 body {
@@ -446,9 +448,13 @@ ul{
 	border: 1px solid #C8CBD3 !important;
 	background-color: #C8CBD3 !important;
 }
+
+.text-primary{
+	color:var(--primary-color) !important;
+}
 .bg-main{
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 	overflow: hidden;
 }
 .section-gap-small{
