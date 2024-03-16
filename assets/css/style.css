@@ -11,12 +11,13 @@
     letter-spacing: 0.4px;
 }
 .section-heading .heading-title-2 {
-    font-size: 1.5em; /* 24px */
+    font-size: 1.7em; /* 24px */
     font-weight: 800;
     color: #111215;
     font-family:var(--font-heading);
     line-height: 32px;
     letter-spacing: 0.24px;
+    margin-bottom: 10px;
 }
 
 .section-heading .heading-sub {
@@ -115,11 +116,13 @@
     .section-heading .heading-title {
         font-size: 2em;
     }
+    .section-heading .heading-title-2 {
+        font-size: 1.4em;
+    }
 
     .section-gap {
         padding: 35px 0;
     }
-
 }
 
 /*==========================================
@@ -2555,7 +2558,7 @@ padding:16px 0;
 
 .cart-form__body .form-label {
     color: #5F6475;
-    font-size: 0.75em;
+    font-size: 0.85em;
     font-weight: 300;
     line-height: 16px;
 }
@@ -2712,14 +2715,159 @@ padding:16px 0;
     }
 }
 
+.page-career__body{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+}
 .page-career__form{
     display: flex;
-    padding: 64px;
+    padding: 64px 110px;
     flex-direction: column;
-    align-items: center;
     gap: 40px;
     border-radius: 40px;
     border: 1px solid var(--primary-50);
     background: var(--bs-white);
     box-shadow: 2px 2px 12px -2px rgba(241, 242, 244, 0.25), 0px 0px 1px 0px rgba(147, 1, 101, 0.10);
+}
+.page-career__heading{
+    display: flex;
+    gap:24px;
+}
+.page-career__form .form-label{
+    color: var(--gray-600);
+    font-size: 0.85em;
+    font-weight: 300;
+}
+.page-career__form .input-form{
+    color:var(--gray-400);
+}
+.page-career__form .form-select option.selected{
+    color:var(--gray-400);
+    font-weight: 400;
+    font-size: 0.8em;
+}
+.form-group .form-check input[type="radio"]{
+    position: relative;
+    z-index: 2;
+}
+.form-group .form-check input[type="radio"]::after{
+    position: absolute;
+    content: '';
+    top:-3px;
+    left: -3px;
+    right:-3px;
+    bottom: -3px;
+    display: block;
+    border-radius: 50%;
+    z-index: 1;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    transition: var(--transition-default);
+    opacity: 0;
+}
+.form-group .form-check input[type="radio"]:checked::after{
+    opacity: 1;
+}
+.form-group .form-check input[type="radio"]:checked {
+    border: 1px solid var(--primary-color);
+    outline: unset !important;
+    background-color: var(--primary-color);
+    background-image: unset !important;
+}
+
+@media(max-width: 1024px) {
+    .page-career__form {
+        padding:40px 70px;
+    }
+}
+@media(max-width: 576px) {
+    .page-career__heading {
+        gap: 12px;
+    }
+    .page-career__image > img{
+        width: 45px;
+    }
+    .page-career__form {
+        padding:20px 20px;
+    }
+}
+
+
+/*==========================
+         card-salon
+===========================*/
+.card-salon{
+    display: flex;
+    padding: 24px;
+    align-items: flex-start;
+    gap: 24px;
+    transition: var(--transition-default);
+    border-radius: 32px;
+
+}
+.card-salon:hover{
+    background: var(--bs-white);
+    box-shadow: 8px 16px 40px 0px rgba(147, 1, 101, 0.10);
+}
+.card-salon__image{
+    width: 150px;
+    flex-shrink:0;
+    overflow: hidden;
+    display: flex;
+}
+.card-salon__image > img{
+    width: 100%;
+    height: auto;
+    border-radius: 32px;
+    transition: var(--transition-default);
+}
+.card-salon__content{
+    gap:16px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.card-salon__title{
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.4em;
+    transition: var(--transition-default);
+}
+.card-salon__title:hover{
+    color:var(--primary-color);
+}
+.card-salon__text{
+    font-size: 1.15em;
+    font-weight: 400;
+}
+@media(max-width: 1024px) {
+    .card-salon{
+        padding: 14px;
+        gap: 14px;
+    }
+    .card-salon__content {
+        gap: 12px;
+    }
+
+    .card-salon__title {
+        font-size: 1.3em;
+    }
+    .card-salon__text {
+        font-size: 1em;
+        font-weight: 400;
+    }
+}
+@media(max-width: 992px) {
+    .card-salon__image{
+        width: 120px;
+    }
+}
+@media(max-width: 375px) {
+    .card-salon{
+       flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
