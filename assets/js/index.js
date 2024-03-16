@@ -130,11 +130,27 @@
         }
     }
 
+    const handleCallSidebarService = function(){
+        let btnService = $('#sidebar-service');
+        let closeService = $('#close-service');
+        if(btnService.length){
+            btnService.click(function(){
+                $('body').addClass('show-service');
+            })
+        }
+
+        if(closeService.length){
+            closeService.click(function(){
+                $('body').removeClass('show-service');
+            })
+        }
+    }
     $(function () {
         handleSliderHero();
         handleSliderCustomers();
         handleSliderReward();
         handleSliderGallery();
+        handleCallSidebarService();
     });
 
 })(jQuery);
