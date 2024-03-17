@@ -478,7 +478,7 @@ ul{
 
 .bg-main{
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 	background-position: top center;
 	overflow: hidden;
 	padding-top: 155px;

@@ -3114,6 +3114,7 @@ display: flex;
     background: var(--bs-white);
     transition: var(--transition-default);
     font-weight: 700;
+    color:var(--text-color);
 }
 
 .service-tab__item.active {
