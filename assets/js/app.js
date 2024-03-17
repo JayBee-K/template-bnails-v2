@@ -3,76 +3,20 @@ window.addEventListener("resize", () => {
 	windowWidth = document.documentElement.clientWidth;
 });
 
-let handleApplyCollapse = function ($parent, $firstItem = false, $callFunction = false) {
-	let $childUl = $parent.find('> li > ul');
-	if ($childUl.length === 0) {
-		return;
-	}
-
-	if ($callFunction) {
-		$parent.find('> li a').each(function () {
-			$(this).attr('data-href', $(this).attr('href'))
-		});
-	}
-
-	if (windowWidth <= 1024) {
-
-		let $objParentAttr = {};
-		let $objChildrenAttr = {
-			'data-bs-parent': '#' + $parent.attr('id')
+const handleStickyMenu = function(){
+	var headerPosition = $('.header-bottom').offset().top;
+	$(window).scroll(function () {
+		var scrollValue = $(window).scrollTop();
+		if (scrollValue > headerPosition) {
+			$('body').addClass('header-fixed');
+		} else {
+			$('body').removeClass('header-fixed');
 		}
 
-		if ($firstItem) {
-			let $parentID = 'menu-' + Math.random().toString(36).substring(7);
-			$parent.attr('id', $parentID);
-			$objParentAttr = {
-				'data-bs-parent': '#' + $parentID
-			}
-
-			$objChildrenAttr = {};
-		}
-
-		$childUl.each(function () {
-			let $parentUl = $(this).closest('ul');
-			let $parentListItem = $(this).closest('li');
-			let $parentListItemAnchor = $parentListItem.children('a');
-
-			let $parentUlID = 'menu-' + Math.random().toString(36).substring(7);
-
-			$parentUl.addClass('collapse').attr({
-				'id': 'collapse-' + $parentUlID, ...$objParentAttr, ...$objChildrenAttr
-			});
-
-			$parentListItemAnchor.replaceWith(function () {
-				return `<button aria-label="${$parentListItemAnchor.attr('aria-label')}" data-href="${$parentListItemAnchor.attr('data-href')}" data-bs-toggle="collapse" data-bs-target="#${$parentUl.attr('id')}">${$parentListItemAnchor.html()}</button>`
-			})
-
-			handleApplyCollapse($parentUl, false);
-
-			$parentUl.on('show.bs.collapse', function () {
-				$parent.find('.collapse.show').not($parentUl).collapse('hide');
-			});
-		});
-	} else {
-		$parent.removeAttr('id');
-
-		$childUl.each(function () {
-			let $parentUl = $(this).closest('ul');
-			let $parentListItem = $(this).closest('li');
-
-			$parentUl.removeClass('collapse').removeAttr('data-bs-parent id');
-			$parentListItem.children('a').attr('href', $parentListItem.children('a').attr('data-href'));
-
-			$parentListItem.children('button').replaceWith(function () {
-				return `<a aria-label="${$(this).attr('aria-label')}" href="${$(this).attr('data-href')}" data-href="${$(this).attr('data-href')}">${$(this).html()}</a>`
-			})
-
-			handleApplyCollapse($parentUl);
-		});
-	}
+	});
 }
-
-let handleCallMenu = function () {
+// =====================menu mobile==================================
+const handleCallMenu = function () {
 	const $body = $('body');
 	const handleBody = function ($toggle = false) {
 		if ($body.hasClass('is-navigation')) {
@@ -87,6 +31,7 @@ let handleCallMenu = function () {
 				$body.addClass('is-navigation is-overflow')
 			}
 		}
+
 	}
 
 	if (windowWidth <= 1024) {
@@ -115,8 +60,8 @@ let handleCallMenu = function () {
 		handleBody();
 	}
 }
-Fancybox.bind("[data-fancybox]", {
-});
+
+// =====================fancybox==================================
 
 const handleInitFancybox = function () {
 	if ($('.initFancybox').length) {
@@ -130,6 +75,9 @@ const handleInitFancybox = function () {
 		});
 	}
 }
+
+// =====================scroll top==================================
+
 const handleScrollTop = function () {
 	$(window).scroll(function () {
 		if ($(document).scrollTop() > 300) {
@@ -147,6 +95,9 @@ const handleScrollTop = function () {
 		return false;
 	});
 }
+
+
+// =====================select form==================================
 
 const handleSelectInput = function(){
 
@@ -180,20 +131,12 @@ const handleSelectInput = function(){
 
 			})
 		}
-
-
-
-
-
 }
 
 $(function () {
-	handleApplyCollapse($('#header-navigation > ul'), true, true);
+	Fancybox.bind("[data-fancybox]");
+	handleStickyMenu();
 	handleCallMenu();
-	$(window).resize(function () {
-		handleApplyCollapse($('#header-navigation > ul'));
-		handleCallMenu();
-	});
 	handleInitFancybox();
 	handleScrollTop();
 	handleSelectInput();

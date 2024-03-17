@@ -33,8 +33,8 @@
 </head>
 <body>
 
+<div class="header-overlay d-block d-xl-none" id="header-overlay"></div>
 <div id="header" class="header">
-    <div class="header-overlay d-block d-xl-none" id="header-overlay"></div>
     <div class="header-top d-md-flex d-none">
         <div class="container-fluid">
             <div class="row align-items-center justify-content-between">
@@ -184,53 +184,53 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" data-name="" aria-label="Home" class="header-navbar__link active">
+                            <a href="index.html" data-name="" aria-label="Home" class="header-navbar__link active">
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)" data-name="Reward" aria-label="Reward"
+                            <a href="reward-giftcard.html" data-name="Reward" aria-label="Reward"
                                class="header-navbar__link">
                                 Reward
                             </a>
                         </li>
                         <li>
-                            <a href="#" aria-label="Services" class="header-navbar__link">
+                            <a href="services.html" aria-label="Services" class="header-navbar__link">
                                 Services
                             </a>
                         </li>
                         <li>
-                            <a href="#" aria-label="Booking" class="header-navbar__link">
+                            <a href="booking.html" aria-label="Booking" class="header-navbar__link">
                                 Booking
                             </a>
                         </li>
                         <li>
-                            <a href="#" aria-label="Giftcard" class="header-navbar__link">
+                            <a href="reward-giftcard.html" aria-label="Giftcard" class="header-navbar__link">
                                 Giftcard
                             </a>
                         </li>
                         <li>
-                            <a href="#" aria-label="Gallery" class="header-navbar__link">
+                            <a href="gallery.html" aria-label="Gallery" class="header-navbar__link">
                                 Gallery
                             </a>
                         </li>
                         <li>
-                            <a href="#" aria-label="New" class="header-navbar__link">
+                            <a href="news.html" aria-label="New" class="header-navbar__link">
                                 New
                             </a>
                         </li>
                         <li>
-                            <a href="#" aria-label="Locations" class="header-navbar__link">
+                            <a href="locations.html" aria-label="Locations" class="header-navbar__link">
                                 Locations
                             </a>
                         </li>
                         <li>
-                            <a href="#" aria-label="About" class="header-navbar__link">
+                            <a href="about-us.html" aria-label="About" class="header-navbar__link">
                                 About
                             </a>
                         </li>
                         <li>
-                            <a href="#" aria-label="Career" class="header-navbar__link">
+                            <a href="career.html" aria-label="Career" class="header-navbar__link">
                                 Career
                             </a>
                         </li>
@@ -272,7 +272,7 @@
     </div>
 </div>
 
-<div id="main" class="main bg-main" style="background-image: url('./assets/images/bg-main.png')">
+<div id="main" class="main bg-main" style="background-image: url('./assets/images/main-bg.png')">
     <div class="section-breadcrumb">
         <div class="container">
             <div class="section-breadcrumb__wrap d-flex flex-column align-items-center justify-content-center">
@@ -290,11 +290,10 @@
         </div>
     </div>
     <div class="page-cart section-gap pt-0">
-
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <form id="">
+<!--                    <form id="">-->
                         <div class="page-cart__booking mb-5">
                             <div class="page-cart__section">
                                 <div class="row">
@@ -696,7 +695,7 @@
                                                 </div>
                                             </div>
                                             <div class="page-cart__section d-flex align-items-center justify-content-center mx-auto">
-                                                <button type="submit" class="button-custom w-70 bg-primary-50 text-color">
+                                                <button  class="button-custom button-custom__submit w-70 bg-primary-50 text-color" data-bs-toggle="modal" data-bs-target="#exampleselect">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16"
                                                          viewBox="0 0 21 20" fill="none">
                                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -728,7 +727,7 @@
                                 </div>
                             </div>
                         </div>
-                    </form>
+<!--                    </form>-->
 
 <!--                    <form id="">-->
                         <div class="page-cart__booking">
@@ -890,7 +889,7 @@
                                    </div>
                                 </div>
                                 <div class="page-cart__section d-flex align-items-center justify-content-center mx-auto">
-                                    <button  class="button-custom w-70" data-bs-toggle="modal" data-bs-target="#examplebooking">
+                                    <button  class="button-custom w-70 button-custom__submit" data-bs-toggle="modal" data-bs-target="#examplebooking">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                             <path d="M6.25065 13.3333C6.94101 13.3333 7.50065 12.7736 7.50065 12.0833C7.50065 11.3929 6.94101 10.8333 6.25065 10.8333C5.56029 10.8333 5.00065 11.3929 5.00065 12.0833C5.00065 12.7736 5.56029 13.3333 6.25065 13.3333Z" fill="white"/>
                                             <path d="M11.2507 12.0833C11.2507 12.7736 10.691 13.3333 10.0007 13.3333C9.31029 13.3333 8.75065 12.7736 8.75065 12.0833C8.75065 11.3929 9.31029 10.8333 10.0007 10.8333C10.691 10.8333 11.2507 11.3929 11.2507 12.0833Z" fill="white"/>
@@ -910,8 +909,6 @@
                 </div>
             </div>
         </div>
-
-
         <div class="section-experience section-gap">
             <div class="container">
                 <div class="section-experience__wrap"
@@ -967,6 +964,34 @@
             <button type="button" class="button-custom" data-bs-dismiss="modal">
                 Okay
             </button>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal-theme modal fade" id="exampleselect" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content modal-lg">
+            <div class="section-heading mb-3">
+                <div class="heading-icon ">
+                    <img src="./assets/images/star.svg" width="65" height="85" alt="">
+                </div>
+                <div class="heading-title mb-2 mt-2">
+                    Please select bellow!!!
+                </div>
+                <div class="heading-text">
+                    Looking for Texas licensed technicans
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <button type="button" class="button-custom">
+                    Book For Myself
+                </button>
+                <button type="button" class="button-custom" >
+                    Book For A Group
+                </button>
+            </div>
+
 
         </div>
     </div>
