@@ -2572,6 +2572,178 @@ padding:16px 0;
     white-space: nowrap;
 }
 
+.page-cart__booking{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+    width: 100%;
+    padding: 64px 110px;
+    border-radius: 40px;
+    border: 1px solid var(--primary-50);
+    background: var(--bs-white);
+    box-shadow: 2px 2px 12px -2px rgba(241, 242, 244, 0.25), 0px 0px 1px 0px rgba(147, 1, 101, 0.10);
+}
+.page-cart__booking .form-label{
+    color:var(--gray-600);
+    font-size: 0.85em;
+}
+.cart-form__input .input-form.input-select{
+    padding: 12px 54px 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+}
+.from-group__select-input .icon-select{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.select-group__absolute{
+    position: absolute;
+    top:100%;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    gap:5px;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.80);
+    box-shadow: 0px 32px 48px -8px rgba(0, 0, 0, 0.10), 0px 0px 14px -4px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(16px);
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: var(--transition-default);
+    opacity: 0;
+    visibility: hidden;
+}
+.show-select .select-group__absolute{
+    opacity: 1;
+    visibility: visible;
+}
+.select-group__absolute li{
+    display: flex;
+    padding: 12px 24px;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    border: 1px solid transparent;
+    background: transparent;
+    transition: var(--transition-default);
+    cursor: pointer;
+}
+.select-group__absolute li:not(:last-child){
+    border-bottom: 1px solid var(--primary-50);
+}
+.select-group__absolute li.active,
+.select-group__absolute li:hover{
+    border-bottom: unset;
+    border: 1px solid var(--primary-200);
+    background: var(--primary-50);
+    border-radius: 56px;
+}
+
+.select-group__absolute > li .select-group__title{
+    font-weight: 700;
+    flex-shrink: 0;
+}
+.select-group__absolute > li .select-group__text{
+    font-weight: 400;
+    position:relative;
+    padding-left: 12px;
+}
+.select-group__absolute > li .select-group__text::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 16px;
+    width: 1px;
+    opacity: 0.5;
+    background:var(--gray-100);
+    transition: var(--transition-default);
+}
+.select-group__absolute li.active .select-group__text::before,
+.select-group__absolute li:hover .select-group__text::before{
+    background: var(--primary-200);
+}
+
+.section-calendar__wrap{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+.cart-section__box{
+    display: flex;
+    padding: 12px;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    border-radius: 12px;
+    background: linear-gradient(270deg, rgba(254, 228, 246, 0.80) 0%, rgba(254, 228, 246, 0.35) 100%);
+}
+.cart-section__box > .image{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+.cart-section__box > .image > img{
+    width: 100%;
+    height: 100%;
+}
+
+.card-calendar{
+    border-radius: 24px;
+    background-color: var(--gray-25);
+    display: flex;
+    padding: 16px 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition-default);
+}
+.card-calendar__title{
+    color: var(--text-color);
+    font-size: 1.125em;
+    font-weight: 500;
+    line-height: 24px;
+}
+.calendar-swiper .button-swiper__item{
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+}
+.calendar-swiper .button-swiper__item svg path{
+    fill: var(--bs-white);
+}
+.calendar-swiper .button-swiper__item.button-prev{
+    position: absolute;
+    left: -20px;
+}
+.calendar-swiper .button-swiper__item.button-next{
+    position: absolute;
+    right: -20px;
+}
+
+.swiper-slide-active .card-calendar{
+    border-radius: 24px;
+    border: 1px solid var(--primary-color);
+    background: var(--primary-50);
+}
+
 @media (max-width: 992px) {
     .page-cart__form {
         padding: 24px;

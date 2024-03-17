@@ -145,12 +145,53 @@
             })
         }
     }
+
+    const handleSliderCalendar = function () {
+        if($('#swiper-calendar .swiper').length){
+            new Swiper('#swiper-calendar .swiper', {
+                slidesPerView: 2.1,
+                spaceBetween: 10,
+                loop:true,
+                speed: 1000,
+                autoplay: {
+                    delay: 6000,
+                    disableOnInteraction: true,
+                },
+                navigation: {
+                    nextEl: '#swiper-calendar .button-next',
+                    prevEl: '#swiper-calendar .button-prev',
+                },
+                breakpoints: {
+                    425: {
+                        slidesPerView: 2.3
+                    },
+                    576: {
+                        slidesPerView: 3
+                    },
+                    768: {
+                        slidesPerView: 4
+                    },
+                    992: {
+                        slidesPerView: 4
+                    },
+                    1024: {
+                        slidesPerView: 5
+                    },
+                    1440: {
+                        slidesPerView: 5
+                    },
+
+                }
+            });
+        }
+    }
     $(function () {
         handleSliderHero();
         handleSliderCustomers();
         handleSliderReward();
         handleSliderGallery();
         handleCallSidebarService();
+        handleSliderCalendar();
     });
 
 })(jQuery);

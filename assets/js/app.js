@@ -148,6 +148,45 @@ const handleScrollTop = function () {
 	});
 }
 
+const handleSelectInput = function(){
+
+		let selectOption = $('.form-group__select');
+
+		if(selectOption.length){
+			selectOption.each(function(){
+				let elmSelect = $(this);
+				let inputSelect = elmSelect.find('.input-select');
+				let option = elmSelect.find('.select-group__absolute');
+
+				inputSelect.click(function (){
+					$('.form-group__select').addClass('show-select');
+				})
+
+				if(option.length){
+					let optionElm = option.find('li');
+
+					optionElm.click(function(e){
+						let elm = $(this);
+						let getTitleOption = elm.data('title');
+
+						optionElm.removeClass('active');
+						elm.addClass('active');
+
+						let a = selectOption.find('.input-select');
+						a.val(getTitleOption);
+						selectOption.removeClass('show-select');
+					})
+				}
+
+			})
+		}
+
+
+
+
+
+}
+
 $(function () {
 	handleApplyCollapse($('#header-navigation > ul'), true, true);
 	handleCallMenu();
@@ -157,4 +196,5 @@ $(function () {
 	});
 	handleInitFancybox();
 	handleScrollTop();
+	handleSelectInput();
 });

@@ -80,6 +80,9 @@
 	--secondary-hover: #ee6b20;
 	--secondary-rgb: 232, 80, 0;
 	--text-color:#111215;
+
+	--gray-25:#F8F8F9;
+	--gray-100:#E4E5E9;
 	--gray-400:#9196A6;
 	--gray-600:#5F6475;
 }
