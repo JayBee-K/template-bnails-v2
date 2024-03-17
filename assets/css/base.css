@@ -463,3 +463,26 @@ ul{
 .section-gap-small{
 	padding: 64px 0;
 }
+.w-70{
+	width: 70%;
+}
+.bg-primary-50{
+	border: 1px solid var(--primary-50) !important;
+	background-color: var(--primary-50) !important;
+}
+.text-color{
+	color:var(--text-color) !important;
+}
+.bg-primary-50:hover{
+	background-color: var(--primary-color) !important;
+	color:var(--bs-white)!important;
+}
+.bg-primary-50:hover svg path{
+	fill: var(--bs-white);
+}
+
+@media(max-width: 576px) {
+	.w-70{
+		width: 100%;
+	}
+}

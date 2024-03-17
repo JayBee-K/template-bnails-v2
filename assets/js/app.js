@@ -159,7 +159,7 @@ const handleSelectInput = function(){
 				let option = elmSelect.find('.select-group__absolute');
 
 				inputSelect.click(function (){
-					$('.form-group__select').addClass('show-select');
+					elmSelect.addClass('show-select');
 				})
 
 				if(option.length){
@@ -172,9 +172,9 @@ const handleSelectInput = function(){
 						optionElm.removeClass('active');
 						elm.addClass('active');
 
-						let a = selectOption.find('.input-select');
+						let a = elmSelect.find('.input-select');
 						a.val(getTitleOption);
-						selectOption.removeClass('show-select');
+						elmSelect.removeClass('show-select');
 					})
 				}
 

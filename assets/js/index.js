@@ -163,13 +163,53 @@
                 },
                 breakpoints: {
                     425: {
+                        slidesPerView: 2.8
+                    },
+                    576: {
+                        slidesPerView: 3
+                    },
+                    768: {
+                        slidesPerView: 3.5
+                    },
+                    992: {
+                        slidesPerView: 4
+                    },
+                    1024: {
+                        slidesPerView: 5
+                    },
+                    1440: {
+                        slidesPerView: 5
+                    },
+
+                }
+            });
+        }
+    }
+
+    const handleSliderClock = function () {
+        if($('#swiper-clock .swiper').length){
+            new Swiper('#swiper-clock .swiper', {
+                slidesPerView: 2.1,
+                spaceBetween: 10,
+                loop:true,
+                speed: 1000,
+                autoplay: {
+                    delay: 6000,
+                    disableOnInteraction: true,
+                },
+                navigation: {
+                    nextEl: '#swiper-clock .button-next',
+                    prevEl: '#swiper-clock .button-prev',
+                },
+                breakpoints: {
+                    425: {
                         slidesPerView: 2.3
                     },
                     576: {
                         slidesPerView: 3
                     },
                     768: {
-                        slidesPerView: 4
+                        slidesPerView: 3.5
                     },
                     992: {
                         slidesPerView: 4
@@ -192,6 +232,7 @@
         handleSliderGallery();
         handleCallSidebarService();
         handleSliderCalendar();
+        handleSliderClock();
     });
 
 })(jQuery);
