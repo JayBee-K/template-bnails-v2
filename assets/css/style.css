@@ -103,6 +103,7 @@
     .section-heading .heading-title {
         font-size: 2.2em;
         margin-bottom: 20px;
+        line-height: unset;
     }
 
     .section-heading .heading-sub {
