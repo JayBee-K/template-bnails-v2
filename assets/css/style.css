@@ -1877,6 +1877,7 @@ padding:16px 0;
     display: flex;
     gap: 12px;
     flex-direction: column;
+    padding: 0 12px;
 }
 
 .card-location__information .information-item {
@@ -1904,6 +1905,12 @@ padding:16px 0;
 .card-location__star {
     color: var(--primary-color);
     font-weight: 700;
+   /* border: 1px solid var(--primary-200);*/
+
+
+}
+.card-location__star .number{
+    transform: translateY(2px);
 }
 
 .card-location:hover {
