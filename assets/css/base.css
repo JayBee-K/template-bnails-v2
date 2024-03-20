@@ -1,71 +1,10 @@
-@font-face {
-	font-family: "HelveticaNeue";
-	src: url("../fonts/HelveticaNeue/HelveticaNeue-Bold.otf");
-	font-weight: 700;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "HelveticaNeue";
-	src: url("../fonts/HelveticaNeue/HelveticaNeue-BoldItalic.otf");
-	font-weight: 700;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "HelveticaNeue";
-	src: url("../fonts/HelveticaNeue/HelveticaNeue-medium.otf");
-	font-weight: 500;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "HelveticaNeue";
-	src: url("../fonts/HelveticaNeue/HelveticaNeue.otf");
-	font-weight: 400;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "HelveticaNeue";
-	src: url("../fonts/HelveticaNeue/HelveticaNeue-Italic.otf");
-	font-weight: 400;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "HelveticaNeue";
-	src: url("../fonts/HelveticaNeue/HelveticaNeue-Light.otf");
-	font-weight: 300;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "HelveticaNeue";
-	src: url("../fonts/HelveticaNeue/HelveticaNeue-LightItalic.otf");
-	font-weight: 300;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "HelveticaNeue";
-	src: url("../fonts/HelveticaNeue/HelveticaNeue-UltraLight.otf");
-	font-weight: 200;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "HelveticaNeue";
-	src: url("../fonts/HelveticaNeue/HelveticaNeue-UltraLightItalic.otf");
-	font-weight: 200;
-	font-style: italic;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
 	--transition-default: 0.3s all ease-in-out;
-	--font-heading: 'Abhaya Libre', Arial, Helvetica, sans-serif;
-	--font-theme: 'HelveticaNeue', sans-serif;
-	--size-theme: 14px;
+	--font-heading: "Lato", sans-serif;
+	--font-theme: "Cabin", sans-serif;
+	--size-theme: 15px;
 
 	--primary-color: #E1099E;
 	--primary-hover: #F960C9;

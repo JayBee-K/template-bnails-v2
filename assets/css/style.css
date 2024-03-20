@@ -1051,7 +1051,7 @@
 
 .section-experience__title {
     color: var(--bs-white);
-    font-family: "Abhaya Libre ExtraBold";
+    font-family:var(--font-heading);
     font-size: 2em;
     font-weight: 800;
     letter-spacing: 0.4px;
@@ -1484,7 +1484,7 @@ padding:16px 0;
 
 .footer-title {
     color: var(--bs-white);
-    font-family: "Abhaya Libre";
+    font-family: var(--font-heading);
     font-size: 1.45em;
     font-weight: 700;
     margin-bottom: 16px;
@@ -1723,7 +1723,7 @@ padding:16px 0;
 }
 
 .section-breadcrumb__title {
-    font-family: "Abhaya Libre ExtraBold";
+    font-family:var(--font-heading);
     font-size: 5.5em;
     font-weight: 800;
     letter-spacing: 0.88px;
@@ -1864,7 +1864,7 @@ padding:16px 0;
 }
 
 .card-location__title {
-    font-family: "Abhaya Libre ExtraBold";
+    font-family: var(--font-heading);
     font-size: 2em;
     font-weight: 800;
     background: var(--text-gradient);
@@ -1968,7 +1968,7 @@ padding:16px 0;
 .location-detail__title {
     transform: rotate(180deg);
     text-align: left;
-    font-family: "Abhaya Libre ExtraBold";
+    font-family: var(--font-heading);
     font-size: 3em;
     font-weight: 800;
     width: max-content;
@@ -2197,7 +2197,7 @@ padding:16px 0;
 }
 
 .booking-form__title {
-    font-family: "Abhaya Libre ExtraBold";
+    font-family: var(--font-heading);
     font-size: 1.5em;
     font-weight: 800;
     letter-spacing: 0.24px;
@@ -2481,7 +2481,7 @@ padding:16px 0;
     border-bottom: 1px solid var(--primary-50);
     background: var(--primary-50);
     color: var(--text-color);
-    font-family: "Abhaya Libre ExtraBold";
+    font-family:var(--font-heading);
     font-size: 1.5em;
     font-weight: 800;
 }
@@ -2598,7 +2598,7 @@ padding:16px 0;
 }
 
 .cart-form__title {
-    font-family: "Abhaya Libre ExtraBold";
+    font-family: var(--font-heading);
     font-weight: 800;
     font-size: 1.5em;
 }
